@@ -4,28 +4,44 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+}
+.btn {
+  @apply bg-maroon-600 text-white py-3 px-3 rounded transition-colors duration-300 ease-in-out;
+}
+.btn:hover {
+  @apply bg-white text-maroon-600 border border-maroon-600;
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.typing-container {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid;
+  animation: typing 4s steps(40, end) 1s 1 normal both,
+    blink 0.75s step-end infinite;
 }
 
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
