@@ -89,7 +89,7 @@ const GoogleReview = () => {
         },
         {
           id: 12,
-          autho: "Katherine Areche",
+          name: "Katherine Areche",
           rating: 5,
           text: "Amazing experience when i first got waxed. She’s very sweet and nice. Literally the best hospitality i’ve ever came across. She definitely made me feel very comfortable.",
         },

@@ -1,11 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
 
-interface ServiceItem {
-  name: string;
-  price: number;
-}
-
 const ServiceItem = ({ name, price }) => {
   const serviceRef = useRef(null);
 
@@ -21,13 +16,16 @@ const ServiceItem = ({ name, price }) => {
       { threshold: 0.1 }
     );
 
-    if (serviceRef.current) {
-      observer.observe(serviceRef.current);
+    // Capture current ref value
+    const currentRef = serviceRef.current;
+
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (serviceRef.current) {
-        observer.unobserve(serviceRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
