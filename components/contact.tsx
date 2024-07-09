@@ -2,7 +2,7 @@ import Head from "next/head";
 
 const ContactUs = () => {
   return (
-    <div className="pt-24 p-10 shadow-lg rounded-lg transform transition duration-500 hover:scale-105">
+    <div className="pt-4 p-10 shadow-lg rounded-lg transform transition duration-500 hover:scale-105">
       <Head>
         <title>
           Contact Kristen Dillon - Waxing Specialist in Bergen County, NJ

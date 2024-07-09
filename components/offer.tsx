@@ -14,17 +14,23 @@ const QualityServices = () => {
     "Organic Hard and Gel Wax",
   ];
 
-  const [animate, setAnimate] = useState(false);
+  const [animateIn, setAnimateIn] = useState(false);
+  const [animateOut, setAnimateOut] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const element = document.getElementById("qualities");
       if (element) {
         const scrollPosition = window.scrollY + window.innerHeight;
-        const elementPosition = element.offsetTop;
+        const elementTop = element.offsetTop;
+        const elementBottom = elementTop + element.offsetHeight;
 
-        if (scrollPosition >= elementPosition) {
-          setAnimate(true);
+        if (scrollPosition >= elementTop) {
+          setAnimateIn(true);
+          setAnimateOut(false);
+        } else if (window.scrollY <= elementBottom) {
+          setAnimateOut(true);
+          setAnimateIn(false);
         }
       }
     };
@@ -34,7 +40,10 @@ const QualityServices = () => {
   }, []);
 
   return (
-    <div className="pt-2 p-10 shadow-lg rounded-lg" id="qualities">
+    <div
+      className="pt-2 p-10 shadow-lg rounded-lg overflow-hidden"
+      id="qualities"
+    >
       <h2 className="text-3xl font-bold text-center mb-6">
         Quality I Offer In My Services
       </h2>
@@ -43,13 +52,13 @@ const QualityServices = () => {
           <li
             key={index}
             className={`flex items-center text-lg transition-transform duration-700 ease-in-out ${
-              animate
+              animateIn
+                ? "translate-x-0"
+                : animateOut
                 ? index % 2 === 0
-                  ? "translate-x-0"
-                  : "translate-x-0"
-                : index % 2 === 0
-                ? "-translate-x-full"
-                : "translate-x-full"
+                  ? "-translate-x-full"
+                  : "translate-x-full"
+                : ""
             }`}
           >
             <span className="inline-block py-2 px-4 bg-purple-500 text-white rounded-full shadow-md">

@@ -1,6 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
-import logo from "../public/images/mainLogo.webp";
 const Note = () => {
   return (
     <div className="m-7">

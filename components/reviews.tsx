@@ -160,9 +160,9 @@ const GoogleReview = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="mx-auto p-4">
       <p className="text-center font-bold mt-0 mb-2 text-red-500">
-        972{" "}
+        977{" "}
         <Link href="https://www.google.com/maps/place/BARE+by+Kristen/@40.894809,-73.976772,17z/data=!3m1!4b1!4m8!3m7!1s0x89c2f6fb1daad08d:0x5f51ba263038f799!8m2!3d40.894809!4d-73.976772!9m1!1b1!16s%2Fg%2F1yg6d443k?entry=ttu">
           Google reviews
         </Link>{" "}
@@ -189,6 +189,11 @@ const GoogleReview = () => {
           </div>
         ))}
       </Slider>
+      <Link href="https://www.google.com/maps/place/BARE+by+Kristen/@40.894809,-73.976772,17z/data=!3m1!4b1!4m8!3m7!1s0x89c2f6fb1daad08d:0x5f51ba263038f799!8m2!3d40.894809!4d-73.976772!9m1!1b1!16s%2Fg%2F1yg6d443k?entry=ttu">
+        <h3 className="bg-red-500 p-2 rounded-lg text-white text-center text-xl font-extrabold">
+          Google Reviews
+        </h3>
+      </Link>
     </div>
   );
 };

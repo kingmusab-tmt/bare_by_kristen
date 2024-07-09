@@ -15,7 +15,11 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <Image src={logo} alt="Company Logo" className="h-auto w-auto" />
+            <Image
+              src={logo}
+              alt="Bare by Kristen Waxing Service Logo"
+              className="h-auto w-auto"
+            />
           </div>
           <div className="flex space-x-4 mb-4 md:mb-0">
             <a

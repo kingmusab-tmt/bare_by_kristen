@@ -1,26 +1,17 @@
 import Image from "next/image";
-import profilePic from "../../public/images/kristen.jpeg";
+import profilePic from "../public/images/kristen.jpeg"; 
 import { Flipcard } from "@/components";
 import Head from "next/head";
 
 const AboutMe = () => {
   return (
-    <div className="pt-24 mb-10 p-8 shadow-lg transform transition duration-500 hover:scale-105">
-      <Head>
-        <title>
-          About BARE by Kristen: Best New Jersey Body Waxing Service
-        </title>
-        <meta
-          name="description"
-          content="Kristen Dillion is a professional body waxing service provider & is known for her pain free waxing throughout the New Jersey and it counties"
-        />
-      </Head>
+    <div className="mb-10 p-8 shadow-lg transform transition duration-500 hover:scale-105">
       <div className="flex flex-col items-center space-x-4">
-        <div className="w-48 h-52 relative rounded-full overflow-hidden border-4 border-white shadow-md">
+        <div className="w-52 h-48 relative rounded-full overflow-hidden border-4 border-red-600 shadow-md">
           <Image
             src={profilePic}
             layout="fill"
-            objectFit="cover"
+            objectFit="fill"
             alt="Kristen Dillon Waxing Expert"
           />
         </div>
@@ -46,7 +37,6 @@ const AboutMe = () => {
           </p>
         </div>
       </div>
-      <Flipcard />
     </div>
   );
 };

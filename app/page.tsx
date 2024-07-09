@@ -1,19 +1,23 @@
+import About from "@/components/about";
 import {
   Carousel,
   GoogleReview,
-  QualityServices,
-  Note,
   StarRatingDisplay,
+  WhyChooseMe,
 } from "../components";
+import Services from "@/components/services";
+import ContactUs from "@/components/contact";
 
 export default function Home() {
   return (
     <main>
       <Carousel />
-      <Note />
+      <About />
+      <WhyChooseMe />
+      <Services />
       <StarRatingDisplay />
       <GoogleReview />
-      <QualityServices />
+      <ContactUs />
     </main>
   );
 }

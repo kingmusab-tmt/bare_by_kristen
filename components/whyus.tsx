@@ -1,11 +1,11 @@
 const WhyChooseMe = () => {
   return (
-    <div className="pt-24 p-10 shadow-lg rounded-lg">
+    <div className="pt-2 px-6 pb-10 shadow-lg rounded-lg">
       <h2 className="text-3xl font-bold text-center mb-6">Why Choose Me?</h2>
 
       {/* Expert Esthetician */}
-      <div className="mb-8">
-        <h3 className="text-xl font-bold mb-2 text-red-600">
+      <div className="mb-8 shadow-lg shadow-orange-700 p-4">
+        <h3 className="text-center text-xl font-bold mb-2 text-red-600">
           Expert Esthetician
         </h3>
         <p className="text-justify">
@@ -16,10 +16,8 @@ const WhyChooseMe = () => {
           happy here.
         </p>
       </div>
-
-      {/* High-Quality Products */}
-      <div className="mb-8">
-        <h3 className="text-xl font-bold mb-2 text-red-600">
+      <div className="mb-8 shadow-lg shadow-orange-700 p-4">
+        <h3 className="text-center text-xl font-bold mb-2 text-red-600">
           High-Quality Products
         </h3>
         <p className="text-justify">
@@ -29,10 +27,8 @@ const WhyChooseMe = () => {
           amazing for sensitive skin.
         </p>
       </div>
-
-      {/* Hygienic Environment */}
-      <div className="mb-8">
-        <h3 className="text-xl font-bold mb-2 text-red-600">
+      <div className="mb-8 shadow-lg shadow-orange-700 p-4">
+        <h3 className=" text-center text-xl font-bold mb-2 text-red-600">
           Hygienic Environment
         </h3>
         <p className="text-justify">
@@ -42,10 +38,8 @@ const WhyChooseMe = () => {
           A new stick is used after every time it touches the skin!
         </p>
       </div>
-
-      {/* Comfort and Privacy */}
-      <div>
-        <h3 className="text-xl font-bold mb-2 text-red-600">
+      <div className="shadow-lg shadow-orange-700 p-4">
+        <h3 className="text-center text-xl font-bold mb-2 text-red-600">
           Comfort and Privacy
         </h3>
         <p className="text-justify">

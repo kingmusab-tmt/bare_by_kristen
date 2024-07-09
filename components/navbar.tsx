@@ -7,14 +7,11 @@ import {
   AiOutlineClose,
   AiOutlineInstagram,
   AiOutlineFacebook,
-  AiOutlineTwitter,
   AiOutlineGoogle,
 } from "react-icons/ai";
 import { useState } from "react";
-// import { useMenuState } from "./clientsidecomponents";
 
 const Navbar = () => {
-  // const { menuOpen, handleNav } = useMenuState();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleNav = () => {
@@ -27,7 +24,7 @@ const Navbar = () => {
         <Link href="/">
           <Image
             src={logo}
-            alt="logo"
+            alt="Bare by Kristen New Jersy Brazilian Waxing logo"
             width="100"
             height="100"
             className="cursor-pointer"
@@ -47,6 +44,11 @@ const Navbar = () => {
             <Link href="/Services">
               <li className="ml-10 uppercase hover:border-b text-xl">
                 My Services
+              </li>
+            </Link>
+            <Link href="/Services">
+              <li className="ml-10 uppercase hover:border-b text-xl">
+                Google Reviews
               </li>
             </Link>
           </ul>
@@ -101,6 +103,14 @@ const Navbar = () => {
                 My Services
               </li>
             </Link>
+            <Link href="https://www.google.com/maps/place/BARE+by+Kristen/@40.894809,-73.976772,17z/data=!3m1!4b1!4m8!3m7!1s0x89c2f6fb1daad08d:0x5f51ba263038f799!8m2!3d40.894809!4d-73.976772!9m1!1b1!16s%2Fg%2F1yg6d443k?entry=ttu">
+              <li
+                onClick={() => setMenuOpen(false)}
+                className="py-4 cursor-pointer text-red-600 font-bold"
+              >
+                Google Reviews
+              </li>
+            </Link>
           </ul>
         </div>
         <div className="flex flex-row justify-around pt-10 items-center cursor-pointer">
@@ -117,7 +127,7 @@ const Navbar = () => {
         <Link href="/">
           <Image
             src={logo}
-            alt="logo"
+            alt="Waxing Service, Bikin, Brazilian Logo"
             width="200"
             height="100"
             className="cursor-pointer pt-10"

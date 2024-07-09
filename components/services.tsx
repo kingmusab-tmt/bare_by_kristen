@@ -1,5 +1,5 @@
 import Head from "next/head";
-import ServiceItem from "./servicesitem";
+import ServiceItem from "../components/servicesitem";
 import { WhyChooseMe } from "@/components";
 
 const services = [
@@ -27,36 +27,10 @@ const services = [
 
 const Services = () => {
   return (
-    <div className="container mx-auto p-4 pt-20">
-      <Head>
-        <title>
-          Expert Waxing Services in Bergen County (NJ) for men & women
-        </title>
-        <meta
-          name="description"
-          content="Bergen County's trusted waxing experts! I offer a variety of pain-free waxing services for men and women. Bikini, Brazilian etc"
-        />
-      </Head>
+    <div className="mx-auto px-4 mb-10">
       <h1 className="text-3xl font-bold mb-8 mt-10 text-center text-red-500">
         My Services
       </h1>
-      <h2 className="text-center font-bold text-red-300">
-        {" "}
-        &quot;Achieve Perfectly Smooth Skin with Expert Waxing Services in
-        Bergen County, New Jersey (NJ)&quot;
-      </h2>
-      <p className="text-justify m-4">
-        Experience the ultimate in professional waxing services in New Jersey
-        (NJ) tailored to meet your every need. As an expert I am dedicated to
-        providing a comfortable and smooth waxing experience for both men and
-        women. Whether you are looking for a full body treatment or targeted
-        areas, I offer a wide range of services to help you achieve perfectly
-        smooth skin. Trust me to deliver exceptional results, ensuring you feel
-        confident and refreshed with every visit.{" "}
-        <span className="text-red-600 font-bold">
-          Please Find below the services and prices I Offer:
-        </span>
-      </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service, index) => (
           <ServiceItem key={index} name={service.name} price={service.price} />
